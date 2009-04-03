@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <style type="text/css">
+      a.test { font-weight: bold; }
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("a").addClass("test");
+        $("a").click(function(event) {
+          event.preventDefault();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="http://jquery.com/">jQuery</a>
+  </body>
+</html>
