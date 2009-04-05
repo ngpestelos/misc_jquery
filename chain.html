@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Chaining in jQuery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("a")
+          .filter(".clickme")
+            .click(function() {
+              alert("You are now leaving the site.");
+            })
+          .end()
+          .filter(".hideme")
+            .click(function() {
+              $(this).hide();
+              return false;
+            })
+          .end();
+      });
+    </script>
+  </head>
+  <body>
+    <a href="http://www.google.com/" class="clickme">I give a message when you leave.</a>
+    <a href="http://yahoo.com/" class="hideme">Click me to hide!</a>
+    <a href="http://microsoft.com/">I'm a normal link</a>
+  </body>
+</html>
