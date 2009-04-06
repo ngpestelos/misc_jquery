@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" media="screen" href="screen.css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#orderedlist li:last").hover(function() {
+          $(this).addClass("green");
+        },function() {
+          $(this).removeClass("green");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="stuff">
+      <ol id="orderedlist">
+        <li>First element</li>
+        <li>Second element</li>
+        <li>Third element</li>
+      </ol>
+      <ol id="orderedlist2">
+        <li>First element, second list</li>
+        <li>Second element, second list</li>
+        <li>Third element, second list</li>
+      </ol>
+    </div>
+  </body>
+</html>
