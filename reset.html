@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#reset").click(function() {
+          $("form")[0].reset();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a id="reset" href="#">Reset!</a>
+    <form id="form">
+      Form 1
+      <input value="XXX" />
+      <input />
+    </form>
+  </body>
+</html>
