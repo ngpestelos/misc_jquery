@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#commentForm").validate(); // needs to be called first
+      });
+    </script>
+  </head>
+  <body>
+    <form id="commentForm">
+      <fieldset>
+        <legend>A simple comment form with submit validation and default messages</legend>
+        <p>
+          <label for="cname">Name</label>
+          <em>*</em><input id="cname" name="name" size="25" class="required" minlength="2" />
+        </p>
+        <p>
+          <label for="cemail">E-mail</label>
+          <em>*</em><input id="cemail" name="email" size="25" class="required email" />
+        </p>
+        <p>
+          <label for="curl">URL</label>
+          <em> </em><input id="curl" name="url" size="25" class="url" value="" />
+        </p>
+        <p>
+          <label for="ccomment">Your comment</label>
+          <em>*</em><textarea id="ccomment" name="comment" cols="22" class="required"></textarea>
+        </p>
+        <p>
+          <input class="submit" type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

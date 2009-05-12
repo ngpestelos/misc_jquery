@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#myform").validate(); // needs to be called first
+        $("a.check").click(function() {
+          alert("Valid: " + $("#myform").valid());
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="myform">
+      <input type="text" name="name" class="required" />
+      <br />
+      <a href="#" class="check">Validate!</a>
+    </form>
+  </body>
+</html>

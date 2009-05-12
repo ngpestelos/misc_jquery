@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery.delegate.js"></script>
+    <script type="text/javascript" src="lib/jquery.validate.js"></script>
+    <script type="text/javascript">
+      jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid";
+      });
+      $(document).ready(function() {
+        $("#myform").validate({
+          rules: {
+            field: {
+              required: true, email: true
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="myform">
+      <label for="field">Required, email: </label>
+      <input class="left" id="field" name="field" />
+      <br />
+      <input type="submit" value="Validate!" />
+    </form>
+  </body>
+</html>
