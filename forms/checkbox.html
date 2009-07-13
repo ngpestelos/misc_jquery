@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Checkbox Example</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#answer_a').click(function() {
+          if (this.checked)
+            $('#answer_b').attr('checked', '');
+        });
+        $('#answer_b').click(function() {
+          if (this.checked)
+            $('#answer_a').attr('checked', '');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <p> 
+        <label for="answer_a">
+          <input type="checkbox" id="answer_a" />
+          Copper
+        </label>
+      </p>
+      <p> 
+        <label for="answer_b">
+          <input type="checkbox" id="answer_b" />
+          Tin
+        </label>
+      </p>
+    </form>
+  </body>
+</html>
