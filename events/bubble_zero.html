@@ -1,0 +1,31 @@
+<!-- bubble.html (see jQuery in Action, p. 89) -->
+<html id="greatgreatgrandpa">
+  <head>
+    <title>Event propagation example (DOM Level 0)</title>
+  </head>
+  <body id="greatgrandpa">
+    <div id="grandpa">
+      <div id="pops">
+        <button id="vstar">Click Me</button>
+      </div>
+      <div id="console"></div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('*').each(function() {
+          var current = this;
+          this.onclick = function(event) {
+            if (!event) event = window.event;
+            var target = (event.target) ? event.target : event.srcElement;
+            say('For ' + current.tagName + '#' + current.id + ' target is ' + target.id);
+          }
+        });
+      });
+      
+      function say(text) {
+        $("#console").append("<div>" + text + "</div>");
+      }
+    </script>
+  </body>
+</html>
