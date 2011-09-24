@@ -1,0 +1,23 @@
+<!-- See evently -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Replace example</title>
+  </head>
+  <body>
+    <div id="foo">
+      <h1>Hello</h1>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $.fn.replace = function(elem) {
+          $(this).empty().append(elem);
+        };
+
+        // Replace 'Hello' with 'Replaced'
+        $("h1").replace($("Replaced"));
+      });
+    </script>
+  </body>
+</html>
